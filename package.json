@@ -1,7 +1,7 @@
 {
-  "name": "@thewisebunker/shared-types",
+  "name": "@thewisebunker/contracts",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "description": "Shared TypeScript types, interfaces, DTOs and enums for The Wise Bunker",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
