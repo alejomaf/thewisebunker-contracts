@@ -1,4 +1,7 @@
 "use strict";
+// =============================================
+// User & Auth
+// =============================================
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ExportFormat = exports.StudySortBy = exports.StudyAccessStatus = exports.StudyDatabase = exports.TicketCategory = exports.TicketPriority = exports.TicketStatus = exports.NotebookStatus = exports.PdfAnnotationType = exports.AI_TOKEN_WEIGHTS = exports.GeminiModel = exports.DiscountCodeType = exports.PaymentStatus = exports.ChatSessionType = exports.ChatMessageRole = exports.CitationSourceType = exports.CitationStyle = exports.ParaphraseMode = exports.MetadataColumnType = exports.FileType = exports.SubscriptionStatus = exports.SubscriptionPlan = exports.AuthProvider = exports.UserRole = void 0;
 var UserRole;
@@ -13,6 +16,9 @@ var AuthProvider;
     AuthProvider["LOCAL"] = "local";
     AuthProvider["GOOGLE"] = "google";
 })(AuthProvider || (exports.AuthProvider = AuthProvider = {}));
+// =============================================
+// Subscription
+// =============================================
 var SubscriptionPlan;
 (function (SubscriptionPlan) {
     SubscriptionPlan["FREE"] = "free";
@@ -26,6 +32,9 @@ var SubscriptionStatus;
     SubscriptionStatus["EXPIRED"] = "expired";
     SubscriptionStatus["PAST_DUE"] = "past_due";
 })(SubscriptionStatus || (exports.SubscriptionStatus = SubscriptionStatus = {}));
+// =============================================
+// Library
+// =============================================
 var FileType;
 (function (FileType) {
     FileType["PDF"] = "pdf";
@@ -44,6 +53,9 @@ var MetadataColumnType;
     MetadataColumnType["LIMITATIONS"] = "limitations";
     MetadataColumnType["CUSTOM"] = "custom";
 })(MetadataColumnType || (exports.MetadataColumnType = MetadataColumnType = {}));
+// =============================================
+// Paraphraser
+// =============================================
 var ParaphraseMode;
 (function (ParaphraseMode) {
     ParaphraseMode["ACADEMIC"] = "academic";
@@ -51,6 +63,9 @@ var ParaphraseMode;
     ParaphraseMode["FORMAL"] = "formal";
     ParaphraseMode["CREATIVE"] = "creative";
 })(ParaphraseMode || (exports.ParaphraseMode = ParaphraseMode = {}));
+// =============================================
+// Citations
+// =============================================
 var CitationStyle;
 (function (CitationStyle) {
     CitationStyle["APA"] = "apa";
@@ -67,6 +82,9 @@ var CitationSourceType;
     CitationSourceType["CONFERENCE_PAPER"] = "conference_paper";
     CitationSourceType["THESIS"] = "thesis";
 })(CitationSourceType || (exports.CitationSourceType = CitationSourceType = {}));
+// =============================================
+// Chat
+// =============================================
 var ChatMessageRole;
 (function (ChatMessageRole) {
     ChatMessageRole["USER"] = "user";
@@ -77,6 +95,9 @@ var ChatSessionType;
     ChatSessionType["PDF"] = "pdf";
     ChatSessionType["FOLDER"] = "folder";
 })(ChatSessionType || (exports.ChatSessionType = ChatSessionType = {}));
+// =============================================
+// Payments
+// =============================================
 var PaymentStatus;
 (function (PaymentStatus) {
     PaymentStatus["PENDING"] = "pending";
@@ -95,6 +116,15 @@ var GeminiModel;
     GeminiModel["FLASH"] = "gemini-3.1-flash-lite-preview";
     GeminiModel["PRO"] = "gemini-3.1-pro-preview";
 })(GeminiModel || (exports.GeminiModel = GeminiModel = {}));
+/**
+ * Weights for converting raw tokens to weighted "AI tokens".
+ * Base unit: 1 Flash input token = 1 AI token.
+ * Ratios derived from Gemini pricing:
+ *   Flash Input  $0.25/1M → 1x
+ *   Flash Output $1.50/1M → 6x
+ *   Pro Input    $2.00/1M → 8x
+ *   Pro Output  $12.00/1M → 48x
+ */
 exports.AI_TOKEN_WEIGHTS = {
     FLASH_INPUT: 1,
     FLASH_OUTPUT: 6,
@@ -106,12 +136,18 @@ var PdfAnnotationType;
     PdfAnnotationType["HIGHLIGHT"] = "highlight";
     PdfAnnotationType["NOTE"] = "note";
 })(PdfAnnotationType || (exports.PdfAnnotationType = PdfAnnotationType = {}));
+// =============================================
+// Notebook
+// =============================================
 var NotebookStatus;
 (function (NotebookStatus) {
     NotebookStatus["DRAFT"] = "draft";
     NotebookStatus["PUBLISHED"] = "published";
     NotebookStatus["ARCHIVED"] = "archived";
 })(NotebookStatus || (exports.NotebookStatus = NotebookStatus = {}));
+// =============================================
+// Tickets
+// =============================================
 var TicketStatus;
 (function (TicketStatus) {
     TicketStatus["OPEN"] = "open";
@@ -134,6 +170,9 @@ var TicketCategory;
     TicketCategory["BILLING"] = "billing";
     TicketCategory["GENERAL"] = "general";
 })(TicketCategory || (exports.TicketCategory = TicketCategory = {}));
+// =============================================
+// Study Search
+// =============================================
 var StudyDatabase;
 (function (StudyDatabase) {
     StudyDatabase["OPENALEX"] = "openalex";
@@ -160,6 +199,9 @@ var StudySortBy;
     StudySortBy["YEAR_DESC"] = "year_desc";
     StudySortBy["YEAR_ASC"] = "year_asc";
 })(StudySortBy || (exports.StudySortBy = StudySortBy = {}));
+// =============================================
+// Library Export
+// =============================================
 var ExportFormat;
 (function (ExportFormat) {
     ExportFormat["CSV"] = "csv";

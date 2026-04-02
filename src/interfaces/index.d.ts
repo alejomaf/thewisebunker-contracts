@@ -39,12 +39,12 @@ export interface IPlanLimits {
     maxNotebooks: number;
     maxFileSizeMb: number;
     maxStorageMb: number;
-    monthlyAiTokenBudget: number;
+    dailyAiTokenBudget: number;
     hasProAccess: boolean;
 }
 export interface IAiTokenUsage {
     userId: string;
-    monthKey: string;
+    dayKey: string;
     flashInputTokens: number;
     flashOutputTokens: number;
     proInputTokens: number;

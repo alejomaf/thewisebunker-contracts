@@ -78,6 +78,15 @@ export declare enum GeminiModel {
     FLASH = "gemini-3.1-flash-lite-preview",
     PRO = "gemini-3.1-pro-preview"
 }
+/**
+ * Weights for converting raw tokens to weighted "AI tokens".
+ * Base unit: 1 Flash input token = 1 AI token.
+ * Ratios derived from Gemini pricing:
+ *   Flash Input  $0.25/1M → 1x
+ *   Flash Output $1.50/1M → 6x
+ *   Pro Input    $2.00/1M → 8x
+ *   Pro Output  $12.00/1M → 48x
+ */
 export declare const AI_TOKEN_WEIGHTS: {
     readonly FLASH_INPUT: 1;
     readonly FLASH_OUTPUT: 6;

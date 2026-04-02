@@ -1,4 +1,13 @@
 "use strict";
+/**
+ * @thewisebunker/shared-types
+ *
+ * Single source of truth for TypeScript types shared
+ * between backend (NestJS) and frontend (Angular).
+ *
+ * - Backend DTOs `implements` these interfaces to guarantee compile-time sync.
+ * - Frontend imports these types directly for HTTP models and forms.
+ */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
