@@ -32,6 +32,7 @@ import {
   ITicket,
   ITicketMessage,
   IUserApiKeyWithMask,
+  IBibReference,
 } from '../interfaces';
 
 // =============================================
@@ -172,6 +173,25 @@ export interface IExportLibraryDto {
   fileIds?: string[];
   folderId?: string;
   scope: 'selection' | 'folder' | 'all';
+}
+
+// Import references
+export interface IImportReferencesResultDto {
+  imported: number;
+  skipped: number;
+  references: IBibReference[];
+}
+
+export interface IBibReferenceMatchResultDto {
+  referenceId: string;
+  fileId: string;
+  confidence: number;
+  matchMethod: 'doi' | 'title' | 'ai';
+}
+
+export interface IMatchPdfResultDto {
+  matched: IBibReferenceMatchResultDto[];
+  unmatched: string[];
 }
 
 // =============================================

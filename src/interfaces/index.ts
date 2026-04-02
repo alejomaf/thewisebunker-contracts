@@ -134,6 +134,29 @@ export interface ILibrarySettings {
   updatedAt: string;
 }
 
+export interface IBibReference {
+  id: string;
+  userId: string;
+  folderId?: string;
+  matchedFileId?: string;
+  citeKey?: string;
+  sourceFormat: string;
+  entryType?: string;
+  title: string;
+  authors?: string;
+  year?: string;
+  journal?: string;
+  doi?: string;
+  volume?: string;
+  issue?: string;
+  pages?: string;
+  publisher?: string;
+  url?: string;
+  abstract?: string;
+  extraFields: Record<string, string>;
+  createdAt: string;
+}
+
 // =============================================
 // Paraphraser
 // =============================================
