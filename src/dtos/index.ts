@@ -11,6 +11,7 @@ import {
   TicketCategory,
   GeminiModel,
   ChatSessionType,
+  AiProvider,
 } from '../enums';
 import {
   IUser,
@@ -30,6 +31,7 @@ import {
   IPdfAnnotationRect,
   ITicket,
   ITicketMessage,
+  IUserApiKeyWithMask,
 } from '../interfaces';
 
 // =============================================
@@ -471,4 +473,19 @@ export interface IAdminRevenueStatsDto {
   totalRefunds: number;
   paymentsByPlan: Record<string, number>;
   revenueByMonth: Array<{ month: string; revenue: number; refunds: number }>;
+}
+
+// =============================================
+// User API Keys (BYOK)
+// =============================================
+
+export interface ISaveUserApiKeyDto {
+  provider: AiProvider;
+  apiKey: string;
+}
+
+export interface IUserApiKeyResponseDto extends IUserApiKeyWithMask {}
+
+export interface IToggleUserApiKeyDto {
+  isActive: boolean;
 }

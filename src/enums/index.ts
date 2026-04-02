@@ -120,6 +120,13 @@ export enum GeminiModel {
   PRO = 'gemini-3.1-pro-preview',
 }
 
+export enum AiProvider {
+  GEMINI = 'gemini',
+  OPENAI = 'openai',
+  CLAUDE = 'claude',
+  DEEPSEEK = 'deepseek',
+}
+
 /**
  * Weights for converting raw tokens to weighted "AI tokens".
  * Base unit: 1 Flash input token = 1 AI token.

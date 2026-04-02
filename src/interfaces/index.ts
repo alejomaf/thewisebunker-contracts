@@ -463,7 +463,7 @@ export interface IStudyOpenAccessResult {
 // Payments
 // =============================================
 
-import { PaymentStatus, DiscountCodeType } from '../enums';
+import { PaymentStatus, DiscountCodeType, AiProvider } from '../enums';
 
 export interface IPayment {
   id: string;
@@ -495,4 +495,21 @@ export interface IDiscountCode {
   isActive: boolean;
   createdAt: string;
   updatedAt: string;
+}
+
+// =============================================
+// User API Keys (BYOK – Bring Your Own Key)
+// =============================================
+
+export interface IUserApiKey {
+  id: string;
+  userId: string;
+  provider: AiProvider;
+  isActive: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface IUserApiKeyWithMask extends IUserApiKey {
+  maskedKey: string;
 }
